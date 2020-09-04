@@ -1,0 +1,277 @@
+@import "reset";
+
+@import "media-loyalty-medical-card";
+@import 'animation';
+@import "footer";
+@import "common";
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding: 0px 0px 100px;
+}
+
+
+
+
+
+.main-circles {
+  width: 330px;
+  height: 120%;
+  background: #f8fcfe;
+  position: fixed;
+  top: -10%;
+  right: 0;
+  z-index: -1;
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+  animation-name: rightCircleEffect;
+animation-timing-function: linear;
+animation-iteration-count: 1;
+  animation-duration: 1s;
+animation-direction: alternate;   
+
+  transition: all 0.9s linear;
+}
+
+.main-circles > div {
+  width: 330px;
+  height: 110%;
+  background: #eaf6fd;
+  position: fixed;
+  top: -5%;
+  right: -110px;
+
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+  transition: all 0.9s linear;
+}
+.main-circles > div > div {
+  width: 330px;
+  height: 100%;
+  background: #d5edfa;
+  position: fixed;
+  top: 0%;
+  right: -220px;
+
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+
+  transition: all 0.9s linear;
+}
+
+
+
+.content-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+}
+.content-container > h2 {
+    padding: 0 0 60px;
+    text-align: center;
+    font-size: 36px;
+    color: #159ee3;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    font-family: "Gilroy-bold";
+}
+.go-back {
+    padding: 10px 0 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.go-back a {
+    display: inline-block;
+    padding: 0 0 0 25px;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #0077b3;
+    position: relative;
+   
+    transition: all 0.2s linear;
+    &:hover{
+      &::before{
+        left: -5px;
+      }
+    }
+}
+.go-back a::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../assets/images/arrow_back_blue.svg') no-repeat 0 50%;
+  
+    transition: all 0.2s linear;
+}
+.current-card {
+    padding: 0 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.current-card .card-image {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    width: 33%;
+  
+    border-radius: 6%;
+    border-radius: 6px;
+}
+.current-card .card-image img {
+    display: block;
+    width: 100%;
+}
+.current-card .info {
+    width: 64%;
+
+}
+.current-card .info .head {
+    padding: 0 0 20px;
+    margin: 0 0 25px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.current-card .info .head h3 {
+    padding: 0 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0077b3;
+    font-family: "Gilroy-bold";
+    margin: 0;
+}
+.current-card .info .head p {
+    font-size: 17px;
+    color: #7c7c7c;
+    margin: 0;
+}
+.current-card .info-bottom ul {
+  
+    display: flex;
+}
+.current-card  .info-bottom ul li {
+    width: 40%;
+    
+    padding: 0 40px 0 0;
+}
+.current-card  .info-bottom ul li p {
+    padding: 0 0 10px;
+    font-size: 15px;
+    margin: 0;
+    color: #7c7c7c;
+}
+.current-card  .info-bottom ul li strong {
+    font-size: 17px;
+    color: #404040;
+    font-family: "Gilroy-light";
+}
+
+.text-container .text {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #404040;
+}
+.text-container .text p {
+    padding: 0 0 25px;
+    margin: 0;
+  strong{
+    font-family: "Gilroy-bold";
+  }
+}
+
+.cards-suggestion {
+    padding: 60px 0 0;
+    display: flex;
+}
+h3,p{
+  margin: 0;
+}
+ul{
+    padding: 0;
+}
+.cards-suggestion .sugg-card:nth-child(2n-1) {
+    margin: 0;
+}
+
+.cards-suggestion .sugg-card .image {
+    padding: 0 0 30px;
+}
+.cards-suggestion .sugg-card .image a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    
+
+    border-radius: 6px;
+}
+.cards-suggestion .sugg-card .image a img {
+    display: block;
+    width: 100%;
+}
+.cards-suggestion .sugg-card h3 {
+    padding: 0 0 10px;
+    font-size: 20px;
+  
+    text-align: center;
+
+    font-family: "Gilroy-bold";
+    a{
+      color: #0077b3;
+    text-decoration: none;
+    }
+}
+.cards-suggestion .sugg-card p {
+    font-size: 17px;
+   
+    text-align: center;
+    color: #7c7c7c;
+}
+
+.cards-suggestion .sugg-card {
+    width: 30%;
+    height: 270px;
+
+    margin: 0 0 0 30px;
+}
+
+.span-aside {
+  color: #fff !important;
+}
+
+
+.phone-a {
+  color: #fff !important;
+}
+.phone-icon {
+  &::before {
+    background: url("../assets/images/phone_icon.svg") no-repeat 0 0 !important;
+  }
+}
+
+.phone {
+  a {
+    &:hover {
+      &:before {
+        animation-name: ringAnime;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}

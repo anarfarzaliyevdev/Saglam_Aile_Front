@@ -1,0 +1,197 @@
+@import "reset";
+
+@import "media-doctors";
+@import "animation";
+@import "footer";
+@import "common";
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding: 0px 0px 100px;
+}
+
+ul{
+  padding: 0;
+}
+
+
+.main-circles {
+  width: 330px;
+  height: 120%;
+  background: #f8fcfe;
+  position: fixed;
+  top: -10%;
+  right: 0;
+  z-index: -1;
+  clip-path: ellipse(100% 50% at 100% 50%);
+  animation-name: rightCircleEffect;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+    animation-duration: 1s;
+  animation-direction: alternate;   
+
+  transition: all 0.9s linear;
+}
+
+.main-circles > div {
+  width: 330px;
+  height: 110%;
+  background: #eaf6fd;
+  position: fixed;
+  top: -5%;
+  right: -110px;
+
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+  transition: all 0.9s linear;
+}
+.main-circles> div > div {
+  width: 330px;
+  height: 100%;
+  background: #d5edfa;
+  position: fixed;
+  top: 0%;
+  right: -220px;
+
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+  transition: all 0.9s linear;
+}
+
+
+
+
+
+.content-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 40px;
+ 
+    h2{
+        padding: 0 0 60px;
+    text-align: center;
+    font-size: 36px;
+    color: #159ee3;
+ 
+    font-family: "Gilroy-bold";
+    }
+}
+.doctors-container {
+    width: 107%;
+    margin: 0 0 0 -22px;
+}
+.doctors-container .accordion {
+    padding: 0 0 30px;
+   
+}
+.doctors-container .accordion h3 {
+    padding: 0 0 0 22px;
+    font-family: "Gilroy-medium";
+}
+.doctors-container .accordion h3 a {
+    display: block;
+    padding: 21px 60px 21px 35px;
+    color: #fff;
+    font-size: 18px;
+
+    text-decoration: none;
+    background: #159ee3;
+    position: relative;
+  
+    border-radius: 5px;
+    &::after{
+        
+        content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../assets/images/nav_pt_white.svg') no-repeat 50%;
+    background-size: 50%;
+    position: absolute;
+    top: 37%;
+    right: 30px;
+    transform: rotate(0deg);
+   
+   
+    transition: all 0.15s linear;
+    }
+}
+
+.doctors-container .accordion .accordion-container {
+    padding: 50px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.accordion-container li {
+   
+    width: 19%;
+    margin: 0 0 35px 22px;
+    padding: 0 0 30px;
+    
+ 
+}
+.accordion-container li a {
+    text-decoration: none;
+}
+.accordion-container li .image {
+    padding: 0 0 20px;
+}
+.accordion-container li .image img {
+    display: block;
+    width: 100%;
+    
+    border-radius: 6px;
+}
+
+.accordion-container li h4 {
+    padding: 0 0 8px;
+    font-size: 15px;
+
+    text-align: center;
+    color: #159ee3;
+    font-family: "Gilroy-medium";
+}
+.accordion-container li p {
+    text-align: center;
+    color: #7c7c7c;
+    font-size: 15px;
+    font-family: "Gilroy-regular";
+}
+.active-accordion-icon{
+    &::after{
+        transform: rotate(-90deg) !important;
+    }
+}
+
+.span-aside {
+  color: #fff !important;
+}
+
+
+.phone-a {
+  color: #fff !important;
+}
+.phone-icon {
+  &::before {
+    background: url("../assets/images/phone_icon.svg") no-repeat 0 0 !important;
+  }
+}
+
+.phone {
+  a {
+    &:hover {
+      &:before {
+        animation-name: ringAnime;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}

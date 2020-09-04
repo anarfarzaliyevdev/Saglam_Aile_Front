@@ -1,0 +1,446 @@
+@import "reset";
+
+@import "media-symptoms";
+@import "animation";
+@import "footer";
+@import "common";
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding: 0px 0px 100px;
+}
+
+
+
+
+
+
+.main-circles {
+  width: 330px;
+  height: 120%;
+  background: #f8fcfe;
+  position: fixed;
+  top: -10%;
+  right: 0;
+  z-index: -1;
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+  animation-name: rightCircleEffect;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-direction: alternate;
+
+  transition: all 0.9s linear;
+}
+
+.main-circles {
+  div {
+    width: 330px;
+    height: 110%;
+    background: #eaf6fd;
+    position: fixed;
+    top: -5%;
+    right: -110px;
+
+    clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+    transition: all 0.9s linear;
+  }
+}
+.main-circles {
+  div {
+    div {
+      width: 330px;
+      height: 100%;
+      background: #d5edfa;
+      position: fixed;
+      top: 0%;
+      right: -220px;
+
+      clip-path: ellipse(100% 50% at 100% 50%);
+
+    
+
+      transition: all 0.9s linear;
+    }
+  }
+}
+
+
+
+
+.content-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.content-container {
+  h2 {
+    padding: 0 0 60px;
+    text-align: center;
+    font-size: 36px;
+    color: #159ee3;
+  
+  
+    font-family: "Gilroy-bold";
+  }
+  .text {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.75;
+    color: #404040;
+  }
+}
+area {
+  cursor: pointer;
+  outline: none;
+}
+.symptom-map {
+  display: flex;
+  justify-content: center;
+}
+.man {
+  .mapped-image {
+    background: url("../assets/images/man.jpg") no-repeat 0 0;
+  }
+}
+.woman {
+  .mapped-image {
+    background: url("../assets/images/woman.jpg") no-repeat 0 0;
+    img {
+      background: none;
+    }
+  }
+}
+.search {
+ 
+  width: 58px;
+  height: 58px;
+  background-image: linear-gradient(220deg, #0fc8f0, #149de2);
+
+  box-shadow: 0 10px 20px 0 rgba(21, 158, 227, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0px;
+
+  border-radius: 50%;
+
+  transition: all 0.2s linear;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: all 0.2s linear;
+  }
+}
+.search-icon {
+  &::before {
+    background: url("../assets/images/search_white_icon.svg") no-repeat 50%;
+  }
+}
+.man-icon {
+  &::before {
+    background: url("../assets/images/man_icon.svg") no-repeat 50%;
+  }
+}
+.search-image-header {
+
+  margin: 0 0 50px;
+  position: relative;
+.text{
+  p{
+    font-family: "Gilroy-light";
+  }
+}
+}
+.search-input {
+  display: none;
+
+  input {
+    padding: 0 50px 0 30px;
+    outline: none;
+    &:focus{
+      box-shadow: rgba(21, 158, 227, 0.2) 0px 0px 8px 0px;
+      border-color: rgb(21, 158, 227);
+    }
+    height: 58px;
+    width: 94%;
+    &::placeholder {
+      color: #c2c2c2;
+  
+      font-family: "Gilroy-light";
+    }
+    border: 1px solid #c2c2c2;
+    font-size: 17px;
+ 
+    font-family: "Gilroy";
+    background: #fff url("../assets/images/search_icon.svg") no-repeat
+      96% 50%;
+
+    border-radius: 5px;
+
+    transition: all 0.2s linear;
+  }
+}
+.data-tags {
+  text-align: left;
+  a {
+    margin: 0 19px 15px 0;
+    font-size: 16px;
+    color: #5a5a5a;
+    text-decoration: underline;
+
+  }
+}
+.symptom-tags-container {
+  padding: 40px 0px;
+}
+.paddingSide25 {
+  padding: 0 25px;
+}
+.paddingBottom40 {
+  padding-bottom: 60px;
+}
+.data-tags {
+  text-align: left;
+}
+.symptom-tags {
+  display: none;
+}
+.data-tags {
+  a[data-tag="head"],
+  a[data-tag="chest"],
+  a[data-tag="stomach"],
+  a[data-tag="hands"],
+  a[data-tag="tuman"],
+  a[data-tag="legs"],
+  a[data-tag="underwear"]{
+    display: none;
+  }
+}
+.data-tags-link-active{
+  color: #0077b3 !important;
+  margin: 0 41px 15px 0 !important;
+  position: relative;
+  &::after{
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: url("../assets/images/remove_blue_icon.svg") no-repeat 0 0;
+    position: absolute;
+    top: 2px;
+    right: -20px;
+    opacity: 0.2;
+  }
+}
+.toggler-opener{
+  display: none;
+  background-image: linear-gradient(220deg, #18d0f8, #18a7ef);
+ 
+  box-shadow: 0 0px 10px 0 rgba(21, 158, 227, 0.5);
+  width: 58px;
+  height: 58px;
+
+  z-index: 1;
+  left: 0;
+  box-shadow: 0 10px 20px 0 rgba(21, 158, 227, 0.5);
+  position: absolute;
+
+ 
+
+  border-radius: 50%;
+
+  transition: all 0.3s linear;
+  span{
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    position: absolute;
+    top: 46%;
+    left: 45%;
+
+  
+    border-radius: 6px;
+    
+    transition: all 0.2s linear;
+    &::before{
+      content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: -12px;
+   
+    border-radius: 6px;
+ 
+    transition: all 0.2s linear;
+ 
+    }
+    &::after{
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      left: 12px;
+    
+      border-radius: 6px;
+      
+      transition: all 0.2s linear;
+    }
+  }
+}
+.toggle-symptoms{
+  display: none;
+  text-align: left;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+
+position: absolute;
+left: 0;
+
+background: #fff;
+
+box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
+
+border-radius: 0 0 8px 0;
+  .toggle-symptoms-container{
+    width: 95%;
+    padding: 20px 10px 10px;
+    overflow: hidden;
+    max-height: 167px;
+    a {
+      display: inline-block;
+      margin: 0 9px 12px 0;
+      font-size: 16px;
+      color: #5a5a5a;
+      text-decoration: underline;
+      position: relative;
+     
+    }
+  }
+ 
+}
+.toggler-container{
+  display: none;
+  display: flex;
+  position: relative;
+  width: 0%;
+  top: -29px;
+  transition: all 0.2s linear;
+
+}
+.toggler-container-active{
+  width: 100% !important;
+}
+.toggle-symptoms-active{
+  width: 87% !important;
+}
+.toggler-opener-active{
+  border-radius: 0 50% 50% 0 !important;
+  left: 86.5% !important; 
+  
+  transition: all 0.3s linear !important;
+  span{
+    width: 32px;
+    height: 4px;
+    left: 12px;
+    &::before{
+      width: 16px;
+    height: 4px;
+    left: 0px;
+    top: -4px;
+    transform: rotate(-30deg);
+    }
+    &::after{
+      width: 16px;
+      height: 4px;
+      left: 0px;
+      top: 4px;
+      transform: rotate(30deg);
+    }
+    
+  }
+
+}
+.symptoms-sugg-container {
+  display: flex;
+  flex-wrap: wrap;
+  .article {
+    margin: 0px 0px 0px 25px;
+    padding: 0px 0px 30px;
+    width: 29%;
+    p {
+      font-size: 14px;
+ 
+      line-height: 1.57;
+      color: rgb(124, 124, 124);
+    }
+    h4 {
+      font-size: 17px;
+ 
+      line-height: 1.41;
+      color: rgb(64, 64, 64);
+      padding: 0px 0px 15px;
+      font-family: "Gilroy-regular";
+      a {
+        color: rgb(64, 64, 64);
+        text-decoration: none;
+      }
+    }
+    .image {
+      padding: 0px 0px 16px;
+      a {
+        border-radius: 6px;
+        display: block;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.span-aside {
+  color: #fff !important;
+}
+
+.phone-a {
+  color: #fff !important;
+}
+.phone-icon {
+  &::before {
+    background: url("../assets/images/phone_icon.svg") no-repeat 0 0 !important;
+  }
+}
+
+.phone {
+  a {
+    &:hover {
+      &:before {
+        animation-name: ringAnime;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}

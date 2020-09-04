@@ -1,0 +1,264 @@
+@import "reset";
+
+@import "media-analyzes";
+@import "animation";
+@import "footer";
+@import "common";
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding: 0px 0px 100px;
+}
+
+
+
+
+
+.main-circles {
+  width: 330px;
+  height: 120%;
+  background: #f8fcfe;
+  position: fixed;
+  top: -10%;
+  right: 0;
+  z-index: -1;
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+  animation-name: rightCircleEffect;
+animation-timing-function: linear;
+animation-iteration-count: 1;
+  animation-duration: 1s;
+animation-direction: alternate;   
+
+  transition: all 0.9s linear;
+}
+
+.main-circles > div {
+  width: 330px;
+  height: 110%;
+  background: #eaf6fd;
+  position: fixed;
+  top: -5%;
+  right: -110px;
+
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+  transition: all 0.9s linear;
+}
+.main-circles > div > div {
+  width: 330px;
+  height: 100%;
+  background: #d5edfa;
+  position: fixed;
+  top: 0%;
+  right: -220px;
+
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+  transition: all 0.9s linear;
+}
+
+
+.content-container {
+  margin: 0 auto;
+  padding: 0 40px;
+
+  max-width: 1920px !important;
+
+  h2 {
+    padding: 0 0 60px;
+    text-align: center;
+    font-size: 36px;
+    color: #159ee3;
+  
+    font-family: "Gilroy-bold";
+  }
+}
+.payment-form {
+  max-width: 616px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.payment-form .input {
+  margin: 0 0 25px;
+  position: relative;
+}
+.payment-form .three-input {
+  margin: 0 0 25px;
+
+  display: flex;
+
+  flex-direction: row;
+
+  flex-wrap: nowrap;
+
+  justify-content: space-between;
+
+
+}
+.payment-form .three-input input {
+  display: block;
+  width: 29%;
+  height: 58px;
+  padding: 0 20px;
+  border: solid 1px #c2c2c2;
+
+  font-size: 16px;
+  font-family: "Gilroy";
+ 
+  border-radius: 4px;
+
+  outline: none;
+  &:focus{
+    box-shadow: rgba(21, 158, 227, 0.2) 0px 0px 8px 0px;
+    border-color: rgb(21, 158, 227);
+  }
+  &::placeholder{
+    font-family: "Gilroy-regular";
+  }
+  transition: all 0.2s linear;
+ 
+}
+
+
+
+.payment-form .input input {
+  outline: none;
+  &:focus{
+    box-shadow: rgba(21, 158, 227, 0.2) 0px 0px 8px 0px;
+    border-color: rgb(21, 158, 227);
+  }
+  
+
+  width: 100%;
+  height: 58px;
+  padding: 0 20px;
+  border: solid 1px #c2c2c2;
+
+  font-size: 16px;
+  font-family: "Gilroy";
+
+  border-radius: 4px;
+
+
+
+  transition: all 0.2s linear;
+    &::placeholder{
+      font-family: "Gilroy-light";
+    }
+}
+
+.payment-form .price {
+  display: flex;
+
+  flex-direction: row;
+
+  flex-wrap: nowrap;
+
+  justify-content: center;
+
+
+  align-items: center;
+  height: 116px;
+  margin: 45px 0 50px;
+  border: 1px dashed #c2c2c2;
+  font-size: 36px;
+  color: #7c7c7c;
+  font-family: "Gilroy-bold";
+}
+.payment-form .price strong {
+  padding: 0 8px 0 0;
+}
+.payment-form .submit{
+  display: flex;
+justify-content: flex-end;;
+}
+.payment-form .submit button {
+
+  height: 58px;
+
+  padding: 0 30px;
+  border: none;
+  font-size: 18px;
+  font-family: "Gilroy";
+  color: #fff;
+
+
+
+  background-image: linear-gradient(257deg, #0fc8f0, #149de2);
+
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  border-radius: 5px;
+
+
+
+  transition: all 0.2s linear;
+  font-family: "Gilroy-bold";
+  
+}
+
+
+
+input[type=number] {
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+#phone{
+  &:hover{
+    &::placeholder {
+ 
+      color: black;
+    
+    
+  }
+  }
+  
+}
+.price-active{
+  border: 1px dashed #0077b3;
+    color: #fff;
+    background: #0077b3;
+    strong{
+      color: #fff;
+    }
+    span{
+      color: #fff;
+    }
+}
+
+
+.span-aside {
+  color: #fff !important;
+}
+
+
+.phone-a {
+  color: #fff !important;
+}
+.phone-icon {
+  &::before {
+    background: url("../assets/images/phone_icon.svg") no-repeat 0 0 !important;
+  }
+}
+
+.phone {
+  a {
+    &:hover {
+      &:before {
+        animation-name: ringAnime;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}

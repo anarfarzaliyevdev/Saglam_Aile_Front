@@ -1,0 +1,159 @@
+@import "reset";
+@import "footer";
+@import "media-articles";
+@import "animation";
+
+@import "common";
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding: 0px 0px 100px;
+}
+
+
+
+
+.main-circles {
+  width: 330px;
+  height: 120%;
+  background: #f8fcfe;
+  position: fixed;
+  top: -10%;
+  right: 0;
+  z-index: -1;
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+  animation-name: rightCircleEffect;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-direction: alternate;
+
+  transition: all 0.9s linear;
+}
+
+.main-circles {
+  div {
+    width: 330px;
+    height: 110%;
+    background: #eaf6fd;
+    position: fixed;
+    top: -5%;
+    right: -110px;
+
+    clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+    transition: all 0.9s linear;
+  }
+}
+.main-circles {
+  div {
+    div {
+      width: 330px;
+      height: 100%;
+      background: #d5edfa;
+      position: fixed;
+      top: 0%;
+      right: -220px;
+
+      clip-path: ellipse(100% 50% at 100% 50%);
+
+   
+
+      transition: all 0.9s linear;
+    }
+  }
+}
+
+
+.content-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+   h2{
+    padding: 0 0 60px;
+    text-align: center;
+    font-size: 36px;
+    color: #159ee3;
+
+
+    font-family: "Gilroy-bold";
+   }
+}
+.article-container{
+    display: flex;
+    flex-wrap: wrap;
+    .article{
+    width: 30%;
+    height: 315px;
+
+    margin: 0 0 0 22px;
+    .image{
+      padding: 0 0 15px;
+      a{
+        img{
+     
+          width: 100%;
+          border-radius: 6px;
+        }
+      
+      }
+    }
+    h4{
+        padding: 0 0 17px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.41;
+        color: #404040;
+        font-family: "Gilroy-medium";
+        a{
+            color: #404040;
+    text-decoration: none;
+            
+        }
+        
+    }
+    .time{
+      font-size: 15px;
+color: #7c7c7c;
+  }
+   }
+   
+   
+}
+h4{
+  margin: 0;
+}
+.article-container .article:nth-child(3n-2) {
+    margin: 0;
+}
+
+.span-aside {
+  color: #fff !important;
+}
+
+.phone-a {
+  color: #fff !important;
+}
+.phone-icon {
+  &::before {
+    background: url("../assets/images/phone_icon.svg") no-repeat 0 0 !important;
+  }
+}
+
+.phone {
+  a {
+    &:hover {
+      &:before {
+        animation-name: ringAnime;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@import 'media-aside-nav';
+@media (max-width: 1024px) {
+
+.polyclinic-services {
+
+    margin: 0px 0px 0px 11px !important;
+}
+#header > div .toggler {
+    right: 20px !important;
+}
+  #header > div {
+    padding: 20px 20px 0 !important;
+    .phone {
+      padding: 20px 80px 0 0px !important;
+      margin-right: 0 !important;
+      a {
+        color: #159ee3;
+      }
+    }
+    
+    .phone {
+      span {
+        color: #159ee3;
+      }
+      a::before {
+       background: url("../assets/images/phone_icon_active.svg") no-repeat 0 0;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+
+    
+  .phone {
+    span {
+      color: #159ee3;
+    }
+    a {
+      color: #159ee3;
+      &::before {
+        background: url("../assets/images/phone_icon_active.svg") no-repeat 0 0;
+      }
+    }
+  }
+  
+}
+@media (max-width: 767px) and (min-width: 480px) {
+    
+    .polyclinic-services #long {
+      width: 93% !important;
+  }
+  .polyclinic-services .service {
+      width: 45% !important;
+  }
+  .footer-container {
+    display: block;
+    text-align: center;
+  
+  }
+  .footer-left {
+    padding: 0 0 10px !important;
+    justify-content: space-between !important;
+  }
+ 
+}
+@media (max-width: 767px) {
+  .polyclinic-services {
+    margin: 0px 0px 0px -8px !important;
+}
+  .logo{
+    a{
+     width: 80px !important;
+     height: 92px !important;
+    }
+   
+  }
+  .aside-nav-items {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-content{
+      margin-bottom: 100px;
+  }
+}
+@media (max-width: 468px) {
+ 
+  .main-nav {
+    display: none;
+    width: 100%;
+    padding: 0 10px;
+    left: 0;
+    top: 120px;
+}
+}
+@media (max-width: 479px) and (min-width: 240px) {
+    .polyclinic-services .service {
+        width: 93% !important;
+   
+  
+        margin: 0 auto 20px !important;
+    }
+ 
+  .footer-container {
+    flex-direction: column !important;
+  }
+  .footer-left {
+    flex-direction: column !important;
+  }
+  .footer-right {
+    span {
+      color: rgba(0, 0, 0, 0.3) !important;
+    }
+  }
+ 
+}
+@media (max-width: 1280px) and (min-width: 1024px) {
+   
+}
+@media (max-width: 1280px) {
+    .main-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 479px) and (min-width: 240px)
+{
+    .wrapper{
+        padding: 0px 0px 1px !important;
+    }
+   
+      
+}
+@media (max-width: 1366px) and (min-width: 1281px){
+    .content-container {
+        max-width: 940px;
+    }
+    
+}
+
+@media (max-width: 1023px) and (min-width: 768px){
+   
+    .polyclinic-services #long {
+      width: 58% !important;
+  }
+  .polyclinic-services .service {
+      width: 28% !important;
+  }
+  
+    
+}
+
+@media (max-width:1280px) and (min-width:1024px){
+  .wrapper{
+    position: absolute !important;
+    width: 100% !important;
+  }
+}
+@media (max-width:1023px) and (min-width:768px){
+  .wrapper{
+    position: absolute !important;
+    width: 100% !important;
+  }
+}

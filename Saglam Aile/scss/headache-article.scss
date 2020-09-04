@@ -1,0 +1,205 @@
+@import "reset";
+
+@import "media-career-nurse";
+@import "animation";
+@import "footer";
+@import "common";
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding: 0px 0px 100px;
+}
+
+
+
+.main-circles {
+  width: 330px;
+  height: 120%;
+  background: #f8fcfe;
+  position: fixed;
+  top: -10%;
+  right: 0;
+  z-index: -1;
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+  animation-name: rightCircleEffect;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-direction: alternate;
+
+  transition: all 0.9s linear;
+}
+
+.main-circles > div {
+  width: 330px;
+  height: 110%;
+  background: #eaf6fd;
+  position: fixed;
+  top: -5%;
+  right: -110px;
+
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+  transition: all 0.9s linear;
+}
+.main-circles {
+  div {
+    div {
+      width: 330px;
+      height: 100%;
+      background: #d5edfa;
+      position: fixed;
+      top: 0%;
+      right: -220px;
+
+      clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+      transition: all 0.9s linear;
+    }
+  }
+}
+
+
+
+
+.content-container {
+  max-width: 980px;
+  position: relative;
+  margin: 0px auto;
+  padding: 0px 40px;
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    color: rgb(21, 158, 227);
+
+    padding: 0px 0px 60px;
+    font-family: "Gilroy-bold";
+  }
+}
+.cover-image-container {
+  padding: 0 0 100px;
+}
+ul {
+  padding: 0;
+}
+.about-article {
+  padding: 0 0 55px;
+  max-width: 800px;
+  margin: 0 auto;
+  h3 {
+    padding: 0 0 30px;
+    font-size: 30px;
+
+    color: #404040;
+    font-family: "Gilroy-regular";
+    margin: 0;
+   
+  }
+  .text {
+    ul {
+      li {
+        padding: 0 0 10px 25px;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          background: #fff;
+          border: 2px solid #159ee3;
+          position: absolute;
+          top: 9px;
+          left: 0;
+
+          border-radius: 50%;
+        }
+      }
+    }
+    font-size: 17px;
+    line-height: 1.75;
+    color: #404040;
+    p {
+      padding: 0 0 25px;
+      margin: 0;
+      strong{
+          font-family: "Gilroy-semi-bold";
+      }
+    }
+  }
+}
+
+.go-back {
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+  padding: 10px 0px 0px;
+  a {
+    display: inline-block;
+    font-size: 17px;
+ 
+    color: rgb(0, 119, 179);
+    position: relative;
+ 
+    padding: 0px 0px 0px 25px;
+    text-decoration: none;
+    transition: all 0.2s linear 0s;
+    &:hover {
+      &::before {
+        left: -5px;
+      }
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      
+      background: url("../assets/images/arrow_back_blue.svg") 0 50% no-repeat;
+      transition: all 0.2s linear 0s;
+    }
+  }
+}
+.cover-image-container .image {
+  padding: 0px 0px 30px;
+  img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+  }
+}
+
+.span-aside {
+  color: #fff !important;
+}
+
+
+.phone-a {
+  color: #fff !important;
+}
+.phone-icon {
+  &::before {
+    background: url("../assets/images/phone_icon.svg") no-repeat 0 0 !important;
+  }
+}
+
+.phone {
+  a {
+    &:hover {
+      &:before {
+        animation-name: ringAnime;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}

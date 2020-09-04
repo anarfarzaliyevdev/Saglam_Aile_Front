@@ -1,0 +1,169 @@
+@import "reset";
+
+@import "media-loyalty-cards";
+@import 'animation';
+@import "footer";
+@import "common";
+
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding: 0px 0px 100px;
+}
+
+h1{
+  margin: 0;
+}
+.main-circles {
+  width: 330px;
+  height: 120%;
+  background: #f8fcfe;
+  position: fixed;
+  top: -10%;
+  right: 0;
+  z-index: -1;
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+  animation-name: rightCircleEffect;
+animation-timing-function: linear;
+animation-iteration-count: 1;
+  animation-duration: 1s;
+animation-direction: alternate;   
+
+  transition: all 0.9s linear;
+}
+
+.main-circles > div {
+  width: 330px;
+  height: 110%;
+  background: #eaf6fd;
+  position: fixed;
+  top: -5%;
+  right: -110px;
+
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+  transition: all 0.9s linear;
+}
+h3,p{
+  margin: 0;
+}
+
+.main-circles > div > div {
+  width: 330px;
+  height: 100%;
+  background: #d5edfa;
+  position: fixed;
+  top: 0%;
+  right: -220px;
+
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+  transition: all 0.9s linear;
+}
+
+
+.content-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 40px;
+    
+}
+.content-container > h2 {
+    padding: 0 0 60px;
+    text-align: center;
+    font-size: 36px;
+    color: #159ee3;
+   
+    font-family: "Gilroy-bold";
+}
+
+.text-container .text {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #404040;
+}
+.text-container .text p {
+    padding: 0 0 25px;
+}
+
+.cards-container {
+    padding: 60px 0 0;
+    display: flex;
+}
+.cards-container .card:nth-child(3n-2) {
+    margin: 0;
+}
+
+.cards-container .card {
+    width: 33%;
+    height: 270px;
+
+    margin: 0 0 0 30px;
+}
+.cards-container .card .image {
+    padding: 0 0 30px;
+}
+.cards-container .card .image a {
+    display: block;
+    
+    text-decoration: none;
+   
+    border-radius: 6px;
+}
+.cards-container .card .image a img {
+    display: block;
+    width: 100%;
+}
+
+.cards-container .card h3 {
+    padding: 0 0 10px;
+    font-size: 20px;
+
+    text-align: center;
+
+    font-family: "Gilroy-bold";
+    a{
+      color: #0077b3;
+      text-decoration: none;
+    }
+}
+.cards-container .card p {
+    font-size: 17px;
+    
+    text-align: center;
+    color: #7c7c7c;
+}
+
+
+.span-aside {
+  color: #fff !important;
+}
+
+
+.phone-a {
+  color: #fff !important;
+}
+.phone-icon {
+  &::before {
+    background: url("../assets/images/phone_icon.svg") no-repeat 0 0 !important;
+  }
+}
+
+.phone {
+  a {
+    &:hover {
+      &:before {
+        animation-name: ringAnime;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}

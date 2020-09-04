@@ -1,0 +1,219 @@
+@import "reset";
+
+@import "media-check-up-packages-child";
+@import 'animation';
+@import "footer";
+@import "common";
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding: 0px 0px 100px;
+}
+
+
+
+
+.main-circles {
+  width: 330px;
+  height: 120%;
+  background: #f8fcfe;
+  position: fixed;
+  top: -10%;
+right: 0;
+  z-index: -1;
+  clip-path: ellipse(100% 50% at 100% 50%);
+animation-name: rightCircleEffect;
+animation-timing-function: linear;
+animation-iteration-count: 1;
+  animation-duration: 1s;
+animation-direction: alternate;   
+  transition: all 0.9s linear;
+}
+
+.main-circles > div {
+  width: 330px;
+  height: 110%;
+  background: #eaf6fd;
+  position: fixed;
+  top: -5%;
+  right: -110px;
+
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+  transition: all 0.9s linear;
+}
+.main-circles > div > div {
+  width: 330px;
+  height: 100%;
+  background: #d5edfa;
+  position: fixed;
+  top: 0%;
+  right: -220px;
+
+  clip-path: ellipse(100% 50% at 100% 50%);
+
+
+
+  transition: all 0.9s linear;
+}
+
+
+
+
+
+.content-container {
+    max-width: 980px;
+    position: relative;
+    margin: 0px auto;
+    padding: 0px 40px;
+}
+.content-container > h2 {
+    text-align: center;
+    font-size: 36px;
+    color: rgb(21, 158, 227);
+ 
+ 
+
+    padding: 0px 0px 60px;
+    font-family: "Gilroy-bold";
+}
+.go-back {
+    padding: 10px 0 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.go-back a {
+    display: inline-block;
+    padding: 0 0 0 25px;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #0077b3;
+    position: relative;
+   
+  
+    transition: all 0.2s linear;
+    &:hover{
+      &::before{
+        left: -5px;
+      }
+    }
+}
+.go-back a::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../assets/images/arrow_back_blue.svg') no-repeat 0 50%;
+  
+    transition: all 0.2s linear;
+}
+
+.package-container {
+    max-width: 800px;
+    margin: 0px auto;
+}
+.package-container .packages {
+    width:105%;
+    margin: 0px 0px 0px -32px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.package-container .package {
+    width: 45%;
+
+    position: relative;
+    margin: 0px 0px 100px 32px;
+}
+.package-container .package a {
+    display: block;
+    position: relative;
+    box-shadow: rgb(203, 203, 203) 0px 0px 0px 1px;
+ 
+    overflow: hidden;
+    border-radius: 6px;
+    transition: all 0.2s linear 0s;
+    &:hover{
+      &::after{
+          opacity: 0;
+      }
+    }
+    
+}
+.package-container .package a img {
+    display: block;
+    width: 100%;
+ 
+}
+
+.package-container .package a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.15;
+
+    background: rgb(0, 119, 179);
+    transition: all 0.6s linear 0s;
+}
+.package-container .package p {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 105%;
+    left: 0px;
+    font-size: 24px;
+
+    z-index: 1;
+    padding: 0px;
+    font-family: "Gilroy-bold";
+}
+.package-container .package p a {
+    color: rgb(0, 119, 179);
+    text-decoration: none;
+    box-shadow: none;
+    &::after{
+  
+      opacity: 0;
+    }
+}
+
+
+
+.span-aside {
+  color: #fff !important;
+}
+
+
+.phone-a {
+  color: #fff !important;
+}
+.phone-icon {
+  &::before {
+    background: url("../assets/images/phone_icon.svg") no-repeat 0 0 !important;
+  }
+}
+
+.phone {
+  a {
+    &:hover {
+      &:before {
+        animation-name: ringAnime;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}
